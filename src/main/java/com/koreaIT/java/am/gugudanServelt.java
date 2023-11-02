@@ -16,14 +16,15 @@ public class gugudanServelt extends HttpServlet {
 		
 		String inputDan = request.getParameter("dan");
 		String inputLimit = request.getParameter("limit");
+		String inputColor = request.getParameter("color");
 		
 		int dan = Integer.parseInt(inputDan); 
 		int limit = Integer.parseInt(inputLimit);
 		
 		
-		response.getWriter().append(String.format("== %d ==\n", dan));
+		response.getWriter().append(String.format("<div style='color:%s;'>== %d ==</div>",inputColor, dan));
 		for ( int i = 1; i <= limit; i ++) {
-			response.getWriter().append(String.format("&d * %d = &d\n", dan, i, dan * i));
+			response.getWriter().append(String.format("<div style=\"color:%s\"> %d * %d = %d</div>",inputColor, dan, i, dan * i));
 		}
 		
 	}
