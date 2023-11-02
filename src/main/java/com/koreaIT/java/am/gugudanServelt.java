@@ -18,6 +18,16 @@ public class gugudanServelt extends HttpServlet {
 		String inputLimit = request.getParameter("limit");
 		String inputColor = request.getParameter("color");
 		
+		if (inputDan == null) {
+			inputDan = "1";
+		}
+		if(inputLimit == null) {
+			inputLimit = "1";
+		}
+		if(inputColor == null) {
+			inputColor = "black";
+		}
+		
 		int dan = Integer.parseInt(inputDan); 
 		int limit = Integer.parseInt(inputLimit);
 		
