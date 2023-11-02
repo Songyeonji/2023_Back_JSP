@@ -7,13 +7,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/home/gugudan")
-public class gugudanServelt extends HttpServlet {
+@WebServlet("/home/reponseTest")
+public class responseTestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/jsp/home/gugudan.jsp").forward(request, response);
-		}
-		
+		request.getRequestDispatcher("/jsp/home/reponseTest.jsp").forward(request, response);
 	}
 	
+
+}
