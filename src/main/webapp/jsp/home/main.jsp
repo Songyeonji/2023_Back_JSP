@@ -1,10 +1,9 @@
+<%@page import="java.util.Map"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
     
-<% 
-	int loginedMemberId = (int) request.getAttribute("loginedMemberId");
-%>
+
 
 <!DOCTYPE html>
 <html>
@@ -15,14 +14,7 @@
 <body>
 	<h1>메인 페이지</h1>
 	
-	<div><a href="../member/join">회원가입</a></div>	<% if (loginedMemberId == -1) { %>
-		<div><a href="../member/join">회원가입</a></div>
-		<div><a href="../member/login">로그인</a></div>
-	<% } %>
-	<% if (loginedMemberId != -1) { %>
-		<div><a href="../member/doLogout">로그아웃</a></div>
-		<div><a href="../article/write">글쓰기</a></div>
-	<% } %>
+	<%@page import="java.util.Map"%>
 	
 	<div><a href="../article/list">게시물 목록</a></div>
 </body>
